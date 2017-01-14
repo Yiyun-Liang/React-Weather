@@ -31,7 +31,8 @@ module.exports = {
         exclude: /(node_modules|bower_components)/
       }
     ]
-  }
+  },
+  devtool: 'cheap-module-eval-source-map'
 };
 // with the configs, simply run in terminal: webpack
 // webpack -w, like supervisor for node
