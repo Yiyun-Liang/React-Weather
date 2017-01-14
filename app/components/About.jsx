@@ -1,6 +1,6 @@
 var React = require('react');
 
-var About1 = React.createClass({
+var About = React.createClass({
   render: function(){
     return(
       <h1>About</h1>
@@ -11,7 +11,7 @@ var About1 = React.createClass({
 // stateless functional component
 // alternative for using only render function is defined like above
 
-var About = (props) => {
+var About1 = (props) => {
   return(
     <h1>About Component</h1>
   );
