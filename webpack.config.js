@@ -3,7 +3,7 @@ var webpack = require('webpack');
 // same as running in terminal: webpack ./public/app.js ./public/bundle.js
 module.exports = {
   entry: [
-    'script!jquery/dist/js/jquery.min.js',
+    'script!jquery/dist/jquery.min.js',
     'script!foundation-sites/dist/js/foundation.min.js',
     './app/app.jsx'
   ],
