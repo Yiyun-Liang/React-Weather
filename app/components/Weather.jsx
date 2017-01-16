@@ -31,9 +31,8 @@ var Weather = React.createClass({
     }, function(e){
       that.setState({
         isLoading: false,
-        errorMessage: e.message
+        errorMessage: 'Unable to fetch weather for that location'
       });
-      alert(errMsg);
     });
   },
   render: function(){
@@ -52,7 +51,7 @@ var Weather = React.createClass({
     function renderErrorMessage(){
       if(typeof errorMessage === 'string'){
         return (
-          <ErrorModal/>
+          <ErrorModal message={errorMessage}/>
         )
       }
     }
