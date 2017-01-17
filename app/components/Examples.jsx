@@ -8,9 +8,6 @@ var Examples = (props) => {
       <p>Here are some examples to try out: </p>
       <ul>
         <li>
-          <Link to='/?location=waterloo'>Waterloo</Link>
-        </li>
-        <li>
           <Link to='/?location=beijing'>Beijing</Link>
         </li>
         <li>

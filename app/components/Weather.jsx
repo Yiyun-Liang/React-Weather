@@ -18,7 +18,9 @@ var Weather = React.createClass({
 
     this.setState({
       isLoading: true,
-      errorMessage: undefined
+      errorMessage: undefined,
+      location: undefined,
+      temp: undefined  // clear old lingering data!!!
     });
 
     openWeatherMap.getTemp(location).then(function(temp){
@@ -34,6 +36,25 @@ var Weather = React.createClass({
         errorMessage: 'Unable to fetch weather for that location'
       });
     });
+  },
+  componentDidMount: function(){
+    // get url
+    var location = this.props.location.query.location;
+
+    if(location && location.length > 0){
+      this.handleSearch(location);
+      // set url
+      window.location.hash = '#/';  // root of our application
+    }
+  },
+  // built in: called when props get updated
+  componentWillReceiveProps: function(newProps){
+    var location = newProps.location.query.location;
+
+    if(location && location.length > 0){
+      this.handleSearch(location);
+      window.location.hash = '#/';  // root of our application
+    }
   },
   render: function(){
     // ES6 destructuring
