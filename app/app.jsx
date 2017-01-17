@@ -13,8 +13,8 @@ var {name} = obj;
 require('style!css!foundation-sites/dist/css/foundation.min.css');
 $(document).foundation();
 
-// custom css
-require('style!css!applicationStyles');  // alias
+// custom css -> scss
+require('style!css!sass!applicationStyles');  // alias
 
 var Main = require('Main');
 var Weather = require('Weather');
